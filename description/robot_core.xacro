@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot">
+
+    <xacro:include filename="inertial_macros.xacro"/>
+
+    <material name = "white">
+        <color rgba="1 1 1 1"/>
+    </material>
+
+    <material name = "orange">
+        <color rgba="1 0.3 0.1 1"/>
+    </material>
+    
+    <material name = "blue">
+        <color rgba="0.2 0.2 1 1"/>
+    </material>
+
+    <material name = "black">
+        <color rgba="0 0 0 1"/>
+    </material>    
+
+    <material name = "red">
+        <color rgba="1 0 0 1"/>
+    </material>    
+
+
+    <link name="base_link">
+
+
+    </link>
+
+ <!-- Base -->
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base"/>
+        <origin xyz="-0.05 0 0"/>
+    </joint>
+    
+    <joint name="base_footprint_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="base_footprint">
+    </link>
+
+    <link name="base">
+        <visual>
+            <origin xyz="0.1 0 0.025"/>
+            <geometry>
+                <box size="0.2 0.2 0.05"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0.1 0 0.025"/>
+            <geometry>
+                <box size="0.2 0.2 0.05"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="1.0" x="0.2" y="0.2" z="0.05">
+            <origin xyz="0.15 0 0.075" rpy= "0 0 0"/>
+        </xacro:inertial_box> 
+    </link>
+    <gazebo reference="base">
+        <material>Gazebo/White</material>
+    </gazebo>
+    
+ <!-- Ruedas -->
+    <joint name="rueda_izq_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="rueda_izq"/>
+        <origin xyz="0 0.11 -0.01" rpy= "-${pi/2} 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="rueda_izq">
+        <visual>
+            <geometry>
+                <cylinder radius="0.03" length="0.024"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.03" length="0.024"/>
+            </geometry>
+            <material name="blue"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.100" length="0.024" radius="0.03">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="rueda_izq">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+
+    <joint name="rueda_der_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="rueda_der"/>
+        <origin xyz="0 -0.11 -0.01" rpy= "${pi/2} 0 0"/>
+        <axis xyz="0 0 -1"/>
+    </joint>
+
+    <link name="rueda_der">
+        <visual>
+            <geometry>
+                <cylinder radius="0.03" length="0.024"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.03" length="0.024"/>
+            </geometry>
+            <material name="blue"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.100" length="0.024" radius="0.03">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="rueda_der">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+ <!--Soporte de Ruedas libres -->
+    <joint name="SopD_libre_joint" type="fixed">
+        <parent link="base"/>
+        <child link="SopD_libre"/>
+        <origin xyz="0.17 0.08 -0.01"/>
+    </joint>
+
+    <link name="SopD_libre">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.03"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.03"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.005" length="0.03" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="SopD_libre">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <joint name="SopI_libre_joint" type="fixed">
+        <parent link="base"/>
+        <child link="SopI_libre"/>
+        <origin xyz="0.17 -0.08 -0.01"/>
+    </joint>
+
+    <link name="SopI_libre">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.03"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.03"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.005" length="0.03" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="SopI_libre">
+        <material>Gazebo/Black</material>
+    </gazebo>
+ <!-- Ruedas libres -->
+    <joint name="Rueda_libreD_joint" type="fixed">
+        <parent link="SopD_libre"/>
+        <child link="Rueda_libreD"/>
+        <origin xyz="0 0 -0.02"/>
+    </joint>
+
+    <link name="Rueda_libreD">
+        <visual>
+            <geometry>
+                <sphere radius="0.01" />
+            </geometry>
+            <material name="orange"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.01" />
+            </geometry>
+            <material name="orange"/>
+        </collision>
+        <xacro:inertial_sphere mass="0.01" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_sphere>
+    </link>
+    
+    <gazebo reference="Rueda_libreD">
+        <material>Gazebo/Orange</material>
+        <mu1 value="0.01"/>
+        <mu2 value="0.01"/>
+    </gazebo>
+
+    <joint name="Rueda_libreI_joint" type="fixed">
+        <parent link="SopI_libre"/>
+        <child link="Rueda_libreI"/>
+        <origin xyz="0 0 -0.02"/>
+    </joint>
+
+    <link name="Rueda_libreI">
+        <visual>
+            <geometry>
+                <sphere radius="0.01" />
+            </geometry>
+            <material name="orange"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.01" />
+            </geometry>
+            <material name="orange"/>
+        </collision>
+        <xacro:inertial_sphere mass="0.01" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_sphere>
+    </link>
+
+    <gazebo reference="Rueda_libreI">
+        <material>Gazebo/Orange</material>
+        <mu1 value="0.001"/>
+        <mu2 value="0.001"/>
+    </gazebo>
+
+ <!-- Barras de union -->
+    <joint name="Barra_joint" type="fixed">
+        <parent link="base"/>
+        <child link="Barra1"/>
+        <origin xyz="0.17 0.08 0.081"/>
+    </joint>
+
+    <link name="Barra1">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.062"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.062"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.04" length="0.062" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="Barra1">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <joint name="Barra2_joint" type="fixed">
+        <parent link="base"/>
+        <child link="Barra2"/>
+        <origin xyz="0.17 -0.08 0.081"/>
+    </joint>
+
+    <link name="Barra2">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.062"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.062"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.04" length="0.062" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="Barra2">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <joint name="Barra3_joint" type="fixed">
+        <parent link="base"/>
+        <child link="Barra3"/>
+        <origin xyz="0.03 0.08 0.081"/>
+    </joint>
+
+    <link name="Barra3">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.062"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.062"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.04" length="0.062" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="Barra3">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <joint name="Barra4_joint" type="fixed">
+        <parent link="base"/>
+        <child link="Barra4"/>
+        <origin xyz="0.03 -0.08 0.081"/>
+    </joint>
+
+    <link name="Barra4">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.062"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.062"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.04" length="0.062" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="Barra4">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+ <!-- tapa o asiento -->
+    <joint name="tapa_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="tapa"/>
+        <origin xyz="-0.05 0 0"/>
+    </joint>
+
+    <link name="tapa">
+        <visual>
+            <origin xyz="0.1 0 0.11"/>
+            <geometry>
+                <box size="0.2 0.2 0.01"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0.1 0 0.11"/>
+            <geometry>
+                <box size="0.2 0.2 0.01"/>
+            </geometry>
+            <material name="white"/>
+        </collision>
+        <xacro:inertial_box mass="0.05" x="0.2" y="0.2" z="0.01">
+            <origin xyz="0 0 0" rpy= "0 0 0"/>
+        </xacro:inertial_box> 
+    </link>
+
+
+    <joint name="EspaldarI_joint" type="fixed">
+        <parent link="tapa"/>
+        <child link="EspaldarI"/>
+        <origin xyz="0.03 -0.08 0.181"/>
+    </joint>
+
+    <link name="EspaldarI">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.132"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.0132"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.04" length="0.132" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="EspaldarI">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <joint name="EspaldarD_joint" type="fixed">
+        <parent link="tapa"/>
+        <child link="EspaldarD"/>
+        <origin xyz="0.03 0.08 0.181"/>
+    </joint>
+
+    <link name="EspaldarD">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.132"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.0132"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <xacro:inertial_cylinder mass="0.04" length="0.132" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="EspaldarD">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+</robot>

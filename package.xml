@@ -3,16 +3,35 @@
 <package format="3">
   <name>my_bot</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="my_email@email.com">MY NAME</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Package for controlling the robot, sending goal poses, and eyetracking functionality.</description>
 
+  <maintainer email="imag3199@gmail.com">MY NAME</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build dependencies -->
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <!-- Run dependencies -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>python3-tk</exec_depend>
+  <exec_depend>opencv-python</exec_depend>
+  <exec_depend>tensorflow</exec_depend>
+  <exec_depend>torch</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>gaze_tracking</exec_depend> <!-- Dependencia de GazeTracking -->
+  <exec_depend>ultralytics</exec_depend>
+  <!-- GazeTracking dependencies -->
+  <exec_depend>gaze_tracking</exec_depend> <!-- Asegúrate de instalar esta librería -->
+
+  <!-- Testing dependencies -->
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
+  <!-- Export settings -->
   <export>
     <build_type>ament_cmake</build_type>
   </export>
 </package>
+

@@ -1,0 +1,157 @@
+[0.009s] Invoking command in '/home/asus/pro_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/asus/pro_ws/src/my_bot -DCMAKE_INSTALL_PREFIX=/home/asus/pro_ws/src/my_bot/install/my_bot
+[0.106s] -- The C compiler identification is GNU 11.4.0
+[0.183s] -- The CXX compiler identification is GNU 11.4.0
+[0.192s] -- Detecting C compiler ABI info
+[0.264s] -- Detecting C compiler ABI info - done
+[0.269s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.269s] -- Detecting C compile features
+[0.270s] -- Detecting C compile features - done
+[0.272s] -- Detecting CXX compiler ABI info
+[0.350s] -- Detecting CXX compiler ABI info - done
+[0.355s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.355s] -- Detecting CXX compile features
+[0.356s] -- Detecting CXX compile features - done
+[0.359s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.681s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.780s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[0.782s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.832s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.839s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.851s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.870s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.885s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.925s] -- Found OpenCV: /usr/local (found version "4.1.0") 
+[0.927s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.000s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.011s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.011s] -- Configured cppcheck include dirs: 
+[1.011s] -- Configured cppcheck exclude dirs and/or files: 
+[1.022s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.022s] -- Configured cpplint exclude dirs and/or files: 
+[1.024s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.027s] -- Added test 'lint_cmake' to check CMake code style
+[1.029s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.041s] -- Added test 'uncrustify' to check C / C++ code style
+[1.041s] -- Configured uncrustify additional arguments: 
+[1.043s] -- Added test 'xmllint' to check XML markup files
+[1.045s] -- Configuring done
+[1.049s] -- Generating done
+[1.050s] -- Build files have been written to: /home/asus/pro_ws/src/my_bot/build/my_bot
+[1.057s] Invoked command in '/home/asus/pro_ws/src/my_bot/build/my_bot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/asus/pro_ws/src/my_bot -DCMAKE_INSTALL_PREFIX=/home/asus/pro_ws/src/my_bot/install/my_bot
+[1.058s] Invoking command in '/home/asus/pro_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/asus/pro_ws/src/my_bot/build/my_bot -- -j16 -l16
+[1.103s] Invoked command in '/home/asus/pro_ws/src/my_bot/build/my_bot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/asus/pro_ws/src/my_bot/build/my_bot -- -j16 -l16
+[1.136s] Invoking command in '/home/asus/pro_ws/src/my_bot/build/my_bot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/asus/pro_ws/src/my_bot/build/my_bot
+[1.144s] -- Install configuration: ""
+[1.144s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking
+[1.144s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/build_and_run.sh
+[1.145s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/requirements.txt
+[1.145s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking
+[1.145s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/gaze_tracking.py
+[1.145s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/eye.py
+[1.145s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/pupil.py
+[1.145s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/__init__.py
+[1.145s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/calibration.py
+[1.145s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/trained_models
+[1.146s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/trained_models/shape_predictor_68_face_landmarks.dat
+[1.307s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/__pycache__
+[1.307s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/__pycache__/gaze_tracking.cpython-310.pyc
+[1.307s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/__pycache__/eye.cpython-310.pyc
+[1.307s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/__pycache__/pupil.cpython-310.pyc
+[1.307s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/__pycache__/__init__.cpython-310.pyc
+[1.307s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/gaze_tracking/__pycache__/calibration.cpython-310.pyc
+[1.307s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git
+[1.307s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/branches
+[1.308s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/HEAD
+[1.308s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks
+[1.308s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/pre-applypatch.sample
+[1.308s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/applypatch-msg.sample
+[1.308s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/update.sample
+[1.308s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/pre-rebase.sample
+[1.308s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/pre-receive.sample
+[1.309s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/pre-push.sample
+[1.309s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/pre-merge-commit.sample
+[1.309s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/fsmonitor-watchman.sample
+[1.309s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/pre-commit.sample
+[1.309s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/push-to-checkout.sample
+[1.309s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/commit-msg.sample
+[1.309s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/post-update.sample
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/hooks/prepare-commit-msg.sample
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/config
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/info
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/info/exclude
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/refs
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/refs/heads
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/refs/heads/master
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/refs/remotes
+[1.310s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/refs/remotes/origin
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/refs/remotes/origin/HEAD
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/refs/tags
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/index
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/logs
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/logs/HEAD
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/logs/refs
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/logs/refs/heads
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/logs/refs/heads/master
+[1.311s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/logs/refs/remotes
+[1.312s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/logs/refs/remotes/origin
+[1.312s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/logs/refs/remotes/origin/HEAD
+[1.312s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/description
+[1.312s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/packed-refs
+[1.312s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/objects
+[1.312s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/objects/info
+[1.312s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/objects/pack
+[1.312s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/objects/pack/pack-dbe56a48e9a14cc95dc2ac2dbf1e7b15678fca09.pack
+[1.435s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.git/objects/pack/pack-dbe56a48e9a14cc95dc2ac2dbf1e7b15678fca09.idx
+[1.435s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/example.py
+[1.435s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/.gitignore
+[1.435s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/Dockerfile
+[1.436s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/environment.yml
+[1.436s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/__init__.py
+[1.436s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/__pycache__
+[1.436s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/__pycache__/__init__.cpython-310.pyc
+[1.436s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/README.md
+[1.436s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/gazetracking/LICENSE
+[1.436s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/config
+[1.436s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/config/joystick.yaml
+[1.437s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/config/my_controllers.yaml
+[1.437s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/config/empty.yaml
+[1.437s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/config/mapper_params_online_async.yaml
+[1.437s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/config/nav2_params.yaml
+[1.437s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/config/twist_mux.yaml
+[1.437s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/description
+[1.437s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/description/robot.urdf.xacro
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/description/inertial_macros.xacro
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/description/ros2_control.xacro
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/description/robot_core.xacro
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/description/lidar.xacro
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/description/gazebo_control.xacro
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/launch
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/launch/joystick.launch.py
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/launch/rsp.launch.py
+[1.438s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/launch/launch_sim.launch.py
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/launch/navigation_launch.py
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/launch/localization_launch.py
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/worlds
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/worlds/calibration.world
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/worlds/walls.world
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/worlds/obstacles.world
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/worlds/empty.world
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/filtro_lidar.py
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/goal_pose_interface.py
+[1.439s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/lib/my_bot/eyetracking.py
+[1.440s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot
+[1.440s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot
+[1.440s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/environment/ament_prefix_path.sh
+[1.440s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv
+[1.440s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/environment/path.sh
+[1.440s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/environment/path.dsv
+[1.440s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.bash
+[1.441s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.sh
+[1.441s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.zsh
+[1.441s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/local_setup.dsv
+[1.441s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/package.dsv
+[1.441s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/ament_index/resource_index/packages/my_bot
+[1.441s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/cmake/my_botConfig.cmake
+[1.441s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake
+[1.441s] -- Installing: /home/asus/pro_ws/src/my_bot/install/my_bot/share/my_bot/package.xml
+[1.444s] Invoked command in '/home/asus/pro_ws/src/my_bot/build/my_bot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/asus/pro_ws/src/my_bot/build/my_bot
