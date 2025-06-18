@@ -15,9 +15,9 @@ Este proyecto implementa un modelo a escala de una silla de ruedas equipada con 
 
 ## Requisitos
 
-- ROS 2 Humble (u otra versión compatible)
+- ROS 2 Humble 
 - Python 3.x
-- Dependencias adicionales (listar según el proyecto)
+- Dependencias adicionales 
 
 ## Instalación
 
