@@ -1,7 +1,26 @@
-## Robot Package Template
+# Proyecto Silla de Ruedas Controlada por Detección Ocular con Navegación Autónoma
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+## Descripción
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `my_bot` to whatever your project's name is.
+Este proyecto implementa un modelo a escala de una silla de ruedas equipada con navegación automática, controlada mediante detección y seguimiento del movimiento ocular. Utiliza ROS (Robot Operating System) para integrar los diferentes módulos de percepción, control y navegación, permitiendo a personas con movilidad reducida manejar la silla mediante el movimiento de sus ojos.
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+## Características principales
+
+- Control de la silla mediante seguimiento ocular (eye-tracking).
+- Navegación autónoma con ROS Navigation Stack.
+- Modelo físico a escala para pruebas y desarrollo.
+- Integración de sensores LIDAR y cámara para percepción del entorno.
+- Algoritmos para procesamiento en tiempo real de la dirección de la mirada.
+- Interfaz intuitiva para el usuario final.
+
+## Requisitos
+
+- ROS 2 Humble (u otra versión compatible)
+- Python 3.x
+- Dependencias adicionales (listar según el proyecto)
+
+## Instalación
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/Imag09/mi_paquete_ROS.git
